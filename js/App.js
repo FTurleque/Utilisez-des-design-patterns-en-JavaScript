@@ -8,8 +8,8 @@ class App {
         const data = await this.moviesApi.getMovies()
 
         data.forEach(data => {
-            // const Template = new TemplateCardFactory(data)
-            // this.$moviesWrapper.appendChild(Template.createCard())
+            const Template = new TemplateCardFactory(data)
+            this.$moviesWrapper.appendChild(Template.createCard())
         })
     }
 }
